@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        .montserrat-alternates {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .noto-sans-georgian {
+            font-family: "Noto Sans Georgian", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+
+        .raleway {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container .image-wrapper, .container .text-wrapper, .header-wrapper, .description-wrapper{
+            position: relative;
+        }
+
+        .container img{
+            width: 350px;
+            height: 300px;
+            background-color: gray;
+            object-fit: cover;
+        }
+
+        .motion-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: 500ms linear;
+        }
+
+        /* .container .text-wrapper:hover .motion-screen {
+            transform: scaleX(1);
+        } */
+
+        .header-wrapper{
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <!-- make sure to place the motion-section div in relative of the parent div -->
+     <div>
+         <section class="container">
+             <div class="image-wrapper">
+                 <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                 <img src="./assets/images/icons8-loading (1).gif" data-src="./assets/images/me.jpg" alt="me" title="Hey this is me 🤓">
+             </div>
+             <div class="text-wrapper">
+                 <div class="header-wrapper" style="line-height: 0;">
+                     <div class="motion-screen" data-delay="500" data-duration="1000" data-direction="left"></div>
+                     <h1 class="raleway">THIS IS THE HEADER</h1>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                     <p class="noto-sans-georgian">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="400" data-duration="1500" data-direction="left"></div>
+                     <p class="montserrat-alternates">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+             </div>
+         </section>
+         <section class="container">
+             <div class="image-wrapper">
+                 <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                 <img src="./assets/images/icons8-loading (1).gif" data-src="./assets/images/me.jpg" alt="me" title="Hey this is me 🤓">
+             </div>
+             <div class="text-wrapper">
+                 <div class="header-wrapper" style="line-height: 0;">
+                     <div class="motion-screen" data-delay="500" data-duration="1000" data-direction="left"></div>
+                     <h1 class="raleway">THIS IS THE HEADER</h1>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                     <p class="noto-sans-georgian">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="400" data-duration="1500" data-direction="left"></div>
+                     <p class="montserrat-alternates">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+             </div>
+         </section>
+         <section class="container">
+             <div class="image-wrapper">
+                 <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                 <img src="./assets/images/icons8-loading (1).gif" data-src="./assets/images/me.jpg" alt="me" title="Hey this is me 🤓">
+             </div>
+             <div class="text-wrapper">
+                 <div class="header-wrapper" style="line-height: 0;">
+                     <div class="motion-screen" data-delay="500" data-duration="1000" data-direction="left"></div>
+                     <h1 class="raleway">THIS IS THE HEADER</h1>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="300" data-duration="1500" data-direction="left"></div>
+                     <p class="noto-sans-georgian">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+                 <div class="description-wrapper">
+                     <div class="motion-screen" data-delay="400" data-duration="1500" data-direction="left"></div>
+                     <p class="montserrat-alternates">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quo praesentium omnis dolore repellendus ab, alias provident blanditiis facere iusto quibusdam debitis reprehenderit optio accusantium minima error. Culpa, ducimus unde? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ad deleniti magnam, vero alias libero iusto doloribus aliquid excepturi accusantium cumque ducimus, molestiae, velit nam. Beatae rerum deserunt hic veritatis?</p>
+                 </div>
+             </div>
+         </section>
+     </div>
+
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
