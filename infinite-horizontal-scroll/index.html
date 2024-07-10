@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: green;
+        }
+
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+            display: grid;
+            place-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+            padding-inline: 0;
+        }
+
+        ul li{
+            display: block;
+            background: #000;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .scroller {
+            position: relative;
+            background-color: #1d1d1d;
+            max-width: 650px;
+            z-index: 10;
+        }
+
+        .scroller[data-animated="true"] {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller[data-animated="true"] .scroller__inner {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: scroll var(--_animation-duration, 150s) var(--_animation-direction, forwards) linear infinite;
+        }
+
+        .scroller[data-direction="right"] {
+            --_animation-direction: reverse;
+        }
+
+        .scroller[data-speed="slow"] {
+            --_animation-duration: 250s;
+        }
+
+        .scroller__inner{
+            padding-block: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translate(calc(-50% - .5rem));
+            }
+        }
+
+        .preview{
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100svw;
+            height: 100svh;
+            /* background-color: green; */
+            z-index: 0;
+        }
+
+        .preview img {
+            width: 50%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Infinit Scroll</h1>
+
+        <div class="scroller">
+            <div class="tag-list scroller__inner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_RErRoUFJrd-Rp2g-rzfFHcAO73OoahLPA&s" alt="image">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/ksw4ccw0/poster/d/a/s/medium-anime-naruto-poster-asstore-anm3-original-imag6c86hxng4szh.jpeg?q=90&crop=false" alt="image">
+                <img src="https://images8.alphacoders.com/132/1326329.png" alt="image">
+                <img src="https://img.artpal.com/172952/19-23-9-8-13-38-36m.jpg" alt="image">
+                <img src="https://preview.redd.it/serious-saitama-v0-qqpztajzga791.jpg?width=640&crop=smart&auto=webp&s=6617b3692af00062a9c34f6aa5af82b955298b50" alt="image">
+            </div>
+        </div>
+        <div class="scroller" data-direction="right" data-speed="slow">
+            <div class="tag-list scroller__inner">
+                <img src="https://variety.com/wp-content/uploads/2023/11/homelander.jpg?w=1000" alt="image">
+                <img src="https://static.wikia.nocookie.net/versus-compendium/images/5/53/PlutonianEvil.jpeg/revision/latest?cb=20191229203343" alt="image">
+                <img src="https://i.pinimg.com/236x/30/1f/5d/301f5da1010ee90cb6172c7120e5fe41.jpg" alt="image">
+                <img src="https://i.pinimg.com/736x/36/7e/39/367e39a52d963b9ac380c9ea3012ca25.jpg" alt="image">
+            </div>
+        </div>
+        <div class="preview">
+            <img src="https://preview.redd.it/serious-saitama-v0-qqpztajzga791.jpg?auto=webp&s=1e2cba4db1556837dcabacf724e086f4c8731ad6" alt="preview 1">
+            <img src="https://i.pinimg.com/736x/36/7e/39/367e39a52d963b9ac380c9ea3012ca25.jpg" alt=" preview 2">
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
